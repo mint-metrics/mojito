@@ -1,4 +1,4 @@
-<p align="center"><img src="logo.png" alt="Mojito experimentation framework" style="max-width:50%;" /></p>
+<p align="center"><img src="logo.png" alt="Mojito experimentation framework" width="50%"/></p>
 
 # Mojito
 
