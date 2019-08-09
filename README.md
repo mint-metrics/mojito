@@ -1,20 +1,25 @@
-![Mojito logo](logo.png)
+<p align="center"><img src="logo.png" alt="Mojito experimentation framework" style="max-width:50%;" /></p>
 
 # Mojito
 
-A source-controlled split testing framework that lets you build, launch and analyse experiments via Git/CI.
+A modular, source-controlled split testing framework that lets you build, launch and analyse experiments via Git/CI.
 
-Our **Delivery** JS library is a heavily modified fork of the excellent [jamesyu/cohorts](https://github.com/jamesyu/cohorts) lib. Meanwhile we employ heavy use of the [Snowplow Analytics event pipeline](https://snowplowanalytics.com/) for our **Storage** component and [RStudio/Knitr](https://rmarkdown.rstudio.com/) for our **Analytics** reports.
+It's comprised of 3 core modules e.g.: 
+
+1. **[Mojito JS Delivery](https://github.com/mint-metrics/mojito-js-delivery)**: Front-end library for running experiments on your site.
+2. **[Mojito Snowplow Storage](https://github.com/mint-metrics/mojito-snowplow-storage)**: Data models & events for tracking experiments.
+3. **[Mojito R Analytics](https://github.com/mint-metrics/mojito-r-analytics)**: Templatable RMarkdown experiment reports.
+
+![Mojito's 3 components](modules.png)
 
 ## Features
 
 - Under 5kb minified & gzipped
-- Create experiments with simple JSON or YAML
+- Define experiments with simple JS or YAML
 - Self-hosted & git-controlled for familiar code review / merging
 - Expressive trigger system & utilities
-- Variant code JS/CSS minification
+- Variant code (JS/CSS) minification & linting
 - Track and handle JS errors caused by your variant code
-- Own your own experiments data
 
 ## Mojito vs. [vendor]
 
@@ -28,7 +33,7 @@ Git source control & CI | ❌ | ❌ | ✅
 Variant error-tracking/handling | ❌ | ❌ | ✅
 Auto CSS/JS minification | ❗([not custom code](https://community.optimizely.com/t5/Using-Optimizely/Minified-version-of-Optimizely-X-snippet/m-p/21411#M8655)) | ❓ | ✅
 Self-hosted | ❗ (for a fee) | ❗(via API) | ✅
-Data ownership | ❗(yours via S3 export) | ❗(yours via BigQuery) | ✅
+Data ownership | ❗(via S3 export) | ❗(via 360/BigQuery) | ✅
 Retroactively add new metrics | ✅ | ❗(360 only) | ✅
 Server-side/App testing | ✅ | ❗(via API) | ❗(via **Storage**)
 WYSIWYG test editor | ✅ | ✅ | ❌
@@ -44,8 +49,6 @@ Mojito consists of three components, which are often switched out in the course 
 3. **Analytics**: Tools to measure & report on the effects caused by your treatments. e.g. [Mojito R Analytics](https://github.com/mint-metrics/mojito-r-analytics)
 
 Get up and running quickly with the README files inside each section.
-
-![Mojito's 3 components](modules.png)
 
 ## Example experiment
 
@@ -124,6 +127,11 @@ For this experiment, we'll report on transactions and page views:
 You don't exactly need Snowplow Analytics to use Mojito. You can also track experiments to wherever you like, via a custom storage adapter. E.g. To Google Tag Manager, Adobe etc.
 
 You can even [hook Mojito Delivery up to Google Optimize's reports for free](https://mintmetrics.io/web-analytics/track-your-optimizely-vwo-tests-inside-google-optimize/).
+
+## Credits
+
+Our **Delivery** JS library is a heavily modified fork of the excellent [jamesyu/cohorts](https://github.com/jamesyu/cohorts) lib. Meanwhile we employ heavy use of the [Snowplow Analytics event pipeline](https://snowplowanalytics.com/) for our **Storage** component and [RStudio/Knitr](https://rmarkdown.rstudio.com/) for our **Analytics** reports.
+
 
 ## Getting involved
 
