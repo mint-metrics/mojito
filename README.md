@@ -4,6 +4,8 @@
 
 A modular, source-controlled split testing framework that lets you build, launch and analyse experiments via Git/CI.
 
+<p align="center"><a href="https://mojito.mx/docs/home">View documentation</a> | <a href="https://mintmetrics.io/mojito/introducing-mojito-open-source-self-hosted-experimentation-stack/">Read intro blog post</a></p>
+
 It's comprised of 3 core modules e.g.: 
 
 1. **[Mojito JS Delivery](https://github.com/mint-metrics/mojito-js-delivery)**: Front-end library for running experiments on your site.
@@ -142,3 +144,6 @@ Reach out to us via:
  - [Mint Metrics' website](https://mintmetrics.io/)
  - [Open an issue on Github](https://github.com/mint-metrics/mojito/issues/new)
 
+## Learn more
+
+[Read the documentation](https://mojito.mx/) and get Mojito set up. We recommend starting with **Mojito JS Delivery**.
